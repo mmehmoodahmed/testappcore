@@ -1,0 +1,11 @@
+﻿@model testapp.Controllers.FranchiseWidgetSettingVM
+@{
+
+    DateTime curDateTime = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, 0);    
+    DateTime serverStartDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.AddDays(5).Day, 9, 0, 0); 
+    DateTime serverEndDate = serverStartDate.AddDays(1);
+}
+   
+<label asp-for="FranchiseName"></label>
+<input asp-for="ApiKey" type="text" />
+<input asp-for="CustomApiUrl" type="text" />

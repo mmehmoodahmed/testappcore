@@ -1,0 +1,14 @@
+﻿@page "/parambooking"
+@inject IConfiguration Configuration
+@model testapp.Views.Home.ParamPageModel
+@{    
+    //string localUrl = @Configuration["CustomSettings:LocalUrl"];  
+}
+
+<input type="hidden" id="hdnPath" value="@Model.Path" />
+<div id="SearchVehiclePage">  
+    @if (Model != null && Model.Data != null)
+    {
+        @await Html.PartialAsync("ParamSearchCar.cshtml",Model.Data)
+    }
+</div>
